@@ -1,6 +1,6 @@
 puts "Welcome to the number guessing game!"
-puts " Guess a number between 1 and 100"
-theRightAnswer = 67
+puts " Guess a number between 1 and 50"
+theRightAnswer = rand(50)
 
 guesses = 0
 
@@ -13,9 +13,7 @@ guess = gets.chomp.to_i
 if guess == theRightAnswer 
 
 	puts "Congrats!   You Win!"
-	puts "The nunber of tries it took for you is: "
-
-puts guesses
+	puts "The nunber of tries it took for you is: " + guesses.to_s + "  - - nice going!!"
 
 	exit
 

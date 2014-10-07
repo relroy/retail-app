@@ -1,7 +1,7 @@
 puts "Tell me your favorite number and I'll give you your fortune!"
 
 
-fav_num = gets.chomp.to_i
+fav_num = rand(1..1000000000)
 
 
 

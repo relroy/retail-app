@@ -14,6 +14,7 @@ while x >= 0
 	puts " bottles of Pepsi on the wall!"
 	puts ""
 	puts ""
+  sleep 1
 if x == 0	
  	break
  end

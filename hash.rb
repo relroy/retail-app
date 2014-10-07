@@ -13,6 +13,7 @@ state = gets.chomp.downcase
 
 
 	puts "did you say: " + state.capitalize + "?"
+  
 	reply = gets.chomp.downcase
 	if reply == "yes"
 		puts "Thank you!"
