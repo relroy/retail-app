@@ -1,0 +1,13 @@
+<h1>Guess a number</h1>
+
+
+<%= form_tag '/form_result' do %>
+<div>
+  <%= label_tag :message %>
+  <%= text_field_tag :message %>
+  <div>
+    <div>
+      <%= submit_tag 'Send' %>
+    </div>
+
+<% end %>

@@ -1,0 +1,17 @@
+<%= form_tag 'infos' do %>
+<div>
+  <%= label_tag :name %>
+  <%= text_field_tag :name %>
+
+  <%= label_tag :address %>
+  <%= text_field_tag :address %>
+
+<%= label_tag :phone_number %>
+  <%= text_field_tag :phone_number %>
+</div>
+
+<div>
+  <%= submit_tag 'Save Information' %>
+</div>
+
+<% end %>
