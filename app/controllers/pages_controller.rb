@@ -32,7 +32,7 @@ class PagesController < ApplicationController
   def create
     Product.create(params[:product])
     flash[:success] = "Product Added"
-    redirect_to '/products#show'
+    redirect_to '/products/'
   end
   def edit
     @product = Product.find_by(:id => params[:id])
