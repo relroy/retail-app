@@ -1,0 +1,52 @@
+<div class="container">
+
+  <div>
+    <h1 id='index'>PRODUCTS</h1>
+  </div>
+  <h2>Please browse the items listed and make your choice for a purchase</h2>
+  
+    <%= form_tag '/search', class: "navbar-form navbar-left" do %>
+    <div class="form-group">
+      <%= text_field_tag :name, nil, class: "form-control", placeholder: "search here" %>
+    </div>
+    <%= submit_tag 'Search', class: "btn" %>
+
+    <% end %>
+
+    <div>  
+      <table id="product_table" class="table">
+        <thead>
+          <tr>
+            <th>Photo</th>
+            <th>Product</th>
+            <th>Edit</th>
+            <th>Delete</th>
+            <th>Brand</th>
+            <th>Department</th>
+            <th>Isle</th>
+            <th>Price</th>
+            <th>Discount</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @products.each do |product| %> 
+           
+          <tr>
+           <td><img src="<%= product.photo %>" height="200" width="200"/></td>
+           <td><a href="products/<%= product.id %>"><%= product.name %></a></td>
+           <td><a href='products/<%= product.id %>/edit'>EDIT</a></td>
+           <td><a data-confirm='Are you sure?'data-method="delete" href="/products/<%= product.id %>" rel="nofollow">DELETE</a></td>
+           <td><%= product.brand %></td>
+           <td><%= product.department %></td>
+           <td><%= product.isle %></td>
+           <td><%= product.num_to_currency %></td>
+           <td><%= product.discount %></td>
+         </tr>
+       
+         <% end %>
+       </tbody>
+     </table>    
+   </div>
+ </div>
+

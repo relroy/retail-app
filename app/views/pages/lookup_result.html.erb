@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>Here is the product you were searching for:</h1>
+
+  <h2><%= @name %></h2>
+
+  <table id="product_table" class="table">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Brand</th> 
+        <th>Isle</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @products.each do |product| %>  
+      <% if product.name == params[:name] %>
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= product.brand %></td>
+        <td><%= product.isle %></td>
+        <td><%= product.price %></td>
+      </tr>
+    </tbody>
+    <% end %>
+    <% end %>
+  </table>
+</div>
