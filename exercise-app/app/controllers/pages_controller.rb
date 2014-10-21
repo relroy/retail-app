@@ -31,8 +31,41 @@ class PagesController < ApplicationController
 
    
   end
+
+  
      
     
+   end
+     def bottles
+
+      @x = 99
+      @song = ""
+      @end = ""
+
+  while @x >= 0
+     
+    @song = @song + @x.to_s + " bottles of Pepsi on the wall, " 
+     
+    
+    @song = @song + @x.to_s + " bottles of Pepsi, take one down, pass it around, "
+     @x = @x-1
+     
+     @song = @song + @x.to_s + " bottles of Pepsi on the wall!"
+
+      if @x == 0 
+      break
+      end
+  end
+@end = ' "SORRY, I LIKE PEPSI BETTER!" '
+def new_line
+  @numbers = '"Here are your lucky numbers for todays lottery: '
+    @lotterytwo = []
+    6.times do
+    @lotterytwo << rand(1..62)
+    end
+  
+end
+     
    end
 end
  

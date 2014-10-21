@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_name: MyString
+  invoice_number: MyString
+  quantity: MyString
+  garment: MyString
+  job: MyString
+  cost: MyString
+  notes: MyString
+  total_due: MyString
+  payments: MyString
+  balance_due: MyString
+  over_due: MyString
+  credit: MyString
+
+two:
+  customer_name: MyString
+  invoice_number: MyString
+  quantity: MyString
+  garment: MyString
+  job: MyString
+  cost: MyString
+  notes: MyString
+  total_due: MyString
+  payments: MyString
+  balance_due: MyString
+  over_due: MyString
+  credit: MyString

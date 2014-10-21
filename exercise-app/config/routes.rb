@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 get 'fortune' => 'pages#fortune'
 get 'lottery' => 'pages#lottery'
 get 'counter' => 'pages#counter'
+get 'bottles' => 'pages#bottles'
+get 'lotteryline' => 'pages#lotteryline'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  garment: MyString
+  job: MyString
+  cost: MyString
+  notes: MyString
+
+two:
+  garment: MyString
+  job: MyString
+  cost: MyString
+  notes: MyString
