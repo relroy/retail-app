@@ -1,4 +1,8 @@
 class Product < ActiveRecord::Base
+  belongs_to :vendor
+  has_many :product_options
+  has_many :photos
+  has_many :orders
   def product_list
     return products.split(",")
     
@@ -22,6 +26,7 @@ class Product < ActiveRecord::Base
     "$" + (price * 0.0625).round(2).to_s
    
   end
+
   
 
 

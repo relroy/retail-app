@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :users
+  post 'orders' => 'orders#create'
+  root 'pages#index'
   get 'products' => 'pages#index'
   get 'products/:id/edit' => 'pages#edit'
   get 'products/new' => 'pages#new'

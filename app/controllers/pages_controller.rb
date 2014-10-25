@@ -5,9 +5,11 @@ class PagesController < ApplicationController
 
   end
   def show
-    productId = params[:id]
+    product_id = params[:id]
+    @products = Product.all
 
-    @product = Product.find(productId)
+    @product = Product.find(product_id)
+    @order = Order.new
 
   end
   def checkout
@@ -30,9 +32,10 @@ class PagesController < ApplicationController
     @product = Product.new
   end
   def create
-    Product.create(params[:product])
+    product = Product.create(params[:product])
     flash[:success] = "Product Added"
-    redirect_to '/products/'
+    redirect_to "/products/#{product.id}"
+
   end
   def edit
     @product = Product.find_by(:id => params[:id])
@@ -42,7 +45,7 @@ class PagesController < ApplicationController
     @product = Product.find_by(:id => params[:id])
     @product.update(params[:product])
     flash[:success] = "Product successfully updated!"
-    redirect_to '/products'
+    redirect_to "/products/#{params[:id]}"
     
   end
   def destroy

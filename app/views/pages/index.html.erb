@@ -14,35 +14,31 @@
     <% end %>
 
     <div>  
-      <table id="product_table" class="table">
-        <thead>
-          <tr>
-            <th>Photo</th>
-            <th>Product</th>
-            <th>Edit</th>
-            <th>Delete</th>
-            <th>Brand</th>
-            <th>Department</th>
-            <th>Isle</th>
-            <th>Price</th>
-            <th>Discount</th>
-          </tr>
-        </thead>
+     
+        
 
         <tbody>
           <% @products.each do |product| %> 
            
-          <tr>
-           <td><img src="<%= product.photo %>" height="200" width="200"/></td>
-           <td><a href="products/<%= product.id %>"><%= product.name %></a></td>
-           <td><a href='products/<%= product.id %>/edit'>EDIT</a></td>
-           <td><a data-confirm='Are you sure?'data-method="delete" href="/products/<%= product.id %>" rel="nofollow">DELETE</a></td>
-           <td><%= product.brand %></td>
-           <td><%= product.department %></td>
-           <td><%= product.isle %></td>
-           <td><%= product.num_to_currency %></td>
-           <td><%= product.discount %></td>
-         </tr>
+          <p>
+           <div class="col-md-3">
+            <div class="thumb">
+              <a href="/products/<%= product.id %>">
+                
+                <img src="<%= product.photo %>" height="200" width="200">
+                  <h3><%= product.name %></h3s>
+              </a>
+              <br/>
+              <p><a href='products/<%= product.id %>/edit'>EDIT/</a></p>
+              <p><a data-confirm='Are you sure?'data-method="delete" href="/products/<%= product.id %>" rel="nofollow">DELETE</a></p>            
+              <p><%= product.brand %></p>             
+              <p><%= product.department %></p>             
+              <p>Isle: <%= product.isle %></p>
+              <p><%= product.num_to_currency %></p>
+              <p><%= product.discount %></p>
+            </div>
+           </div>
+          </p>
        
          <% end %>
        </tbody>

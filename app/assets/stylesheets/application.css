@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+
+.thumb {
+  border: 4px solid #FFFFFF  ;
+  text-align: center;
+  border-radius: 25px;
+  background: #eeeeee;
+}
