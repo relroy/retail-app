@@ -2,7 +2,6 @@
 <h1>Product Description</h1>
 <h2>Add Product?</h2>
 
-
 <table>
   <tr>
     <th>Product----------|</th>
@@ -15,28 +14,20 @@
   
   <tr>
     <td><%= @product.name %></td>
-
     <td><%= @product.brand %></td>
-
     <td><%= @product.description %></td>
-
     <td><%= @product.num_to_currency %></td>
-
     <td><%= @product.tax %></td>
-
     <td><%= @product.vendor.name %></td>
-
-
-
   </tr> 
 </table>
-<%= form_for @order do |f| %>
-<%= f.label :quantity %>
-<%= f.text_field :quantity %>
-<%= f.hidden_field :product_id, value: @product.id %>
+  <%= form_for @order do |f| %>
+  <%= f.label :quantity %>
+  <%= f.text_field :quantity %>
+  <%= f.hidden_field :product_id, value: @product.id %>
 
 
-<%= f.submit "Buy Now!"%>
+  <%= f.submit "Buy Now!"%>
 
 
 
@@ -44,8 +35,8 @@
 <br/>
 <%= link_to 'Back to products', products_path %>
 
-<div>
-  <br/>
-</div>
+  <div>
+    <br/>
+  </div>
 </div>
     

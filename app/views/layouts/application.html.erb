@@ -29,7 +29,7 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
+            <li><a href="/products/new">Create new product</a></li>
             <li><a href="#">Another action</a></li>
             <li><a href="#">Something else here</a></li>
             <li class="divider"></li>
@@ -53,8 +53,11 @@
         <li><a href="/users/sign_up">Sign up</a></li>
         <% end %>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Shopping List <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Create a shopping list</a></li>
+            <li><a href="#">Edit a shopping list</a></li>
+            <li><a href="#">Delete a shopping list</a></li>
             <li><a href="/users/password/edit">Change password</a></li>
             <li class="divider"></li>
             <li><a href="#">Separated link</a></li>
@@ -67,32 +70,32 @@
   <div class="container theme-showcase" role="main">
     <div class="jumbotron">
       <h1>Welcome to <img src='http://www.justpushstart.com/wp-content/uploads/2014/05/Target.jpg' width= "300"px height="125"px><img src='http://www.workingventures.ca/wp-content/uploads/2014/09/christmas-gifts-christmas-lights-christmas-tree-best-christmas-clip-art-labels-free-christmas-clip-art-microsoft-christmas-clip-art-martha-stewart-christmas-clip-art-messages-christmas-clip-art.jpg' width = "125"px height = "125"px></h1>
-      <p>We'll take your shopping to a whole new level with our Smart Shopper App!<br/>Try it today so you can find your Christmas items FAST!</p>
-      <p><a href="#" class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
+      <p>We'll take your shopping to a whole new level with our Smart Shopper App!<br/>Try it today so you can find your Grocery Christmas items FAST!</p>
+      <p><a href="/learn_more" class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
      <!-- Single button -->
 <div class="btn-group">
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-    Shopping Lists <span class="caret"></span>
+    Open for whatever<span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu">
-    <li><a href="#">Create a shopping  
+    <li><a href="#">open link  
       list</a></li>
-    <li><a href="#">Edit a shopping 
+    <li><a href="#">open link
       list</a></li>
-    <li><a href="#">Delete a shopping 
+    <li><a href="#">open link
       list</a></li>
     <li class="divider"></li>
     <li><a href="#">Separated link</a></li>
   </ul>
   <div class="btn-group">
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-    Administration <span class="caret"></span>
+    Open for whatever <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu">
-    <li><a href="/products/new">Create new product</a></li>
+    <li><a href="#">open link</a></li>
 
-    <li><a href='#'>Edit a product</a></li>
-    <li><a href="#">Delete a product</a></li>
+    <li><a href='#'>open link</a></li>
+    <li><a href="#">open link</a></li>
     <li class="divider"></li>
     <li><a href="#">Separated link</a></li>
   </ul>
@@ -109,6 +112,7 @@
       <%= message %>
     </div>
   <% end %>
+  
 <%= yield %>
 
 </body>

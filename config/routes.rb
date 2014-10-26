@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   post 'search' => 'pages#search'
   delete 'products/:id' => 'pages#destroy'
   get 'random_product' => 'pages#random_product'
+  get 'learn_more' => 'pages#learn_more'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
