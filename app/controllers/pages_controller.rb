@@ -2,6 +2,8 @@ class PagesController < ApplicationController
   def index
     @products = Product.all
     @products = Product.where("price < ?", 4) if params[:products] == 'sale_products' 
+
+    
   end
 
   def show

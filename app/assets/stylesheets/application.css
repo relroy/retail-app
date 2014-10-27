@@ -13,11 +13,30 @@
  *= require_tree .
  *= require_self
  */
+.btn {
+  color: white;
+  background: #e30030;
+  border: 2px solid #0c0c12;
+}
 
+.jumbotron{
+  background: #ffffff;
+  border: 5px solid #0c0c12;
+  
 
-.thumb {
-  border: 4px solid #FFFFFF  ;
+}
+.thumb{
+  border: 5px solid #0c0c12;
   text-align: center;
   border-radius: 25px;
-  background: #eeeeee;
+  background: #ffffff;
+}
+a {
+color: black;
+text-decoration: none;
+font-weight: 300;
+font-size: 1.0em;
+}
+.learn-more{
+  color: #224466;
 }
