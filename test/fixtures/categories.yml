@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  baking: MyString
+  beverages: MyString
+  breakfast: MyString
+  candy: MyString
+  canned_food: MyString
+  soup: MyString
+  coffee_and_tea: MyString
+  spices_oils: MyString
+  meat_seafood: MyString
+  pasta_grains: MyString
+  snacks: MyString
+  produce: MyString
+  dairy: MyString
+  poultry: MyString
+
+two:
+  baking: MyString
+  beverages: MyString
+  breakfast: MyString
+  candy: MyString
+  canned_food: MyString
+  soup: MyString
+  coffee_and_tea: MyString
+  spices_oils: MyString
+  meat_seafood: MyString
+  pasta_grains: MyString
+  snacks: MyString
+  produce: MyString
+  dairy: MyString
+  poultry: MyString

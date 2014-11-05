@@ -1,16 +1,21 @@
-class PagesController < ApplicationController
+class ProductsController < ApplicationController
+before_action :authenticate_admin!, :only => [:edit, :destroy]
+
   def index
     @products = Product.all
     @products = Product.where("price < ?", 4) if params[:products] == 'sale_products' 
+    @products = Product.joins(:categories).where("categories.name =?", params[:category]) if params[:category]
+    @categories = Category.all
 
     
   end
+
 
   def show
     product_id = params[:id]
     @products = Product.all
     @product = Product.find(product_id)
-    @order = Order.new
+    @carted_product = CartedProduct.new
   end
 
   def checkout
@@ -32,13 +37,18 @@ class PagesController < ApplicationController
   end
 
   def create
-    product = Product.create(params[:product])
-    flash[:success] = "Product Added"
-    redirect_to "/products/#{product.id}"
+    @product = Product.new(params[:product])
+    if @product.save
+     flash[:success] = "Product Added"
+     redirect_to product_path(@product.id)
+    else
+      render 'new'
+    end
   end
 
   def edit
-    @product = Product.find_by(:id => params[:id])   
+    @product = Product.find_by(:id => params[:id])  
+    
   end
 
   def update
@@ -62,6 +72,8 @@ class PagesController < ApplicationController
 
   def learn_more    
   end
+
+  
   
 
 

@@ -1,0 +1,39 @@
+
+<% if @product.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@product.errors.count, "error") %> prohibited liis product from being saved:</h2>
+ 
+    <ul>
+    <% @product.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+
+<%= form_for @product do |f| %>
+<table>
+  <tbody>
+    <ul>
+<%= f.label :name %>
+<p><%= f.text_field :name %></p>
+<%= f.label :isle %>
+<p><%= f.text_field :isle %></p>
+<%= f.label :price %>
+<p><%= f.text_field :price %></p>
+<%= f.label :description %>
+<p><%= f.text_field :description %></p>
+<%= f.label :photo %>
+<p><%= f.text_field :photo %></p>
+<%= f.label :vendor_id %>
+<p><%= f.text_field :vendor_id %></p>
+</ul>
+</tbody>
+</table>
+  <br/>
+      <div>
+        <%= f.submit %>
+
+      </div>
+<% end %>

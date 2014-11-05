@@ -1,12 +1,22 @@
 class Product < ActiveRecord::Base
-  belongs_to :vendor
+  has_many :categorized_products
+  has_many :categories, through: :categorized_products
+  has_many :carted_products
+  has_many :orders, :through => :carted_products
   has_many :product_options
-  has_many :photos
-  has_many :orders
-  def product_list
-    return products.split(",")
-    
-  end
+  has_many :product_photos
+  belongs_to :vendor
+
+  validates :name, :presence => true
+
+  validates :price, :numericality => true
+
+  validates :vendor_id, :numericality => true
+  
+  
+  
+
+  
   def friendly_created_at
     return created_at.strftime()
     
@@ -15,31 +25,17 @@ class Product < ActiveRecord::Base
     return "$" + price.to_s
 
   end
-  def discount
-    if brand == "Oberweis" 
-      return "On Sale"
-    else return ""
-    end
-    
-  end
-  def tax
-    "$" + (price * 0.0625).round(2).to_s
+  
+  def sales_tax
+    @tax = (price * 0.0625).round(2)
+    x = @tax.to_s
+    return "Sales Tax: $" + x
    
   end
 
+ 
+
   
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 end

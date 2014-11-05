@@ -1,19 +1,33 @@
 Rails.application.routes.draw do
   devise_for :users
+  root 'products#index'
+  get 'products' => 'products#index', :as => :products
+  get 'products/new' => 'products#new'
+  post 'products' => 'products#create'
+  get 'products/:id' => 'products#show'  
+  get 'products/:id/edit' => 'products#edit', :as => :edit_product
+  patch 'products/:id' => 'products#update', :as => :product
+  delete 'products/:id' => 'products#destroy'
+  get 'random_product' => 'products#random_product'
+
   post 'orders' => 'orders#create'
-  root 'pages#index'
-  get 'products' => 'pages#index'
-  get 'products/:id/edit' => 'pages#edit'
-  get 'products/new' => 'pages#new'
-  post 'products' => 'pages#create'
-  get 'products/:id' => 'pages#show' , :as => :product
-   patch 'products/:id' => 'pages#update'
-  get 'checkout' => 'pages#checkout'
-  get 'confirmation' => 'pages#confirmation'
-  post 'search' => 'pages#search'
-  delete 'products/:id' => 'pages#destroy'
-  get 'random_product' => 'pages#random_product'
-  get 'learn_more' => 'pages#learn_more'
+  get 'orders' => 'orders#new'
+  patch 'orders/:id' => 'orders#update', :as => :order
+
+  get 'carted_products' => 'carted_products#index'
+  post 'carted_products' => 'carted_products#create'
+
+   
+  get 'checkout' => 'products#checkout'
+  get 'confirmation' => 'products#confirmation'
+  post 'search' => 'products#search'
+  get 'learn_more' => 'products#learn_more'
+
+  
+  
+  
+
+   
 
 
   # The priority is based upon order of creation: first created -> highest priority.
